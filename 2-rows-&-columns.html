@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - Rows & Columns</title>
+    <style>
+            .container{
+                background-color:#eee;
+                width:700px;
+                height:800px;
+                display:grid;
+                grid-template-rows: 1fr 200px;
+                /* grid-template-columns: 200px 200px 200px; */
+                grid-template-columns: repeat(3,200px) 100px;
+                grid-gap:20px;
+
+            }
+            .item-1{
+                background-color:orangered;
+            }
+            .item-2{
+                background-color:yellowgreen;
+            }
+            .item-3{
+                background-color:slateblue;
+            }
+            .item-4{
+                background-color:seagreen;
+            }
+            .item-5{
+                background-color:aqua
+            }
+            .item-6{
+                background-color:purple;
+            }
+    </style>
+</head>
+<body>
+        <h1>Css Grid</h1>
+        <div class="container">
+             <div class="item-1">item-1</div>
+             <div class="item-2">item-2</div>
+             <div class="item-3">item-3</div>
+             <div class="item-4">item-4</div>
+             <div class="item-5">item-5</div>
+             <div class="item-6">item-6</div>
+        </div>
+</body>
+</html>
