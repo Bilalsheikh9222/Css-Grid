@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 - Explicit-grid -&- Implicit-grid</title>
+    <style>
+        .container{
+                color:white;
+                display:grid;
+                grid-template-rows:repeat(2,120px);
+                grid-template-columns:repeat(2,1fr);
+                margin:0 auto;
+                grid-gap:15px;
+                /* for implicit */
+                grid-auto-rows:200px; /* and columns */
+                grid-auto-flow:row; /* by default rows */
+            }
+            .item-1{
+                background:orange;
+            }
+            .item-2{
+                background:seagreen;
+            }
+            .item-3{
+                background:yellow;
+            }
+            .item-4{
+                background:blue;
+            }
+            .item-5{
+                background:pink;
+            }
+            .item-6{
+                background:purple;
+            }
+    </style>
+</head>
+<body>
+        <h1>9 - Explicit-grid -&- Implicit-grid</h1>
+        <div class="container">
+                <div class="item-1">One</div>
+                <div class="item-2">Two</div>
+                <div class="item-3">Three</div>
+                <div class="item-4">Four</div>
+                <div class="item-5">Five</div>
+                <div class="item-6">Six</div>
+        </div>
+</body>
+</html>

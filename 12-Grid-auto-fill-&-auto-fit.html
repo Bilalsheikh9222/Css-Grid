@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 - Grid-auto-fill & Grid-auto-fit</title>
+    <style>
+            .container{
+                /* width:600px; */
+                width:80%;
+                margin:0 auto;
+                background:gray;
+                display:grid;
+                grid-template-rows:repeat(2,100px);
+                /* grid-template-columns:repeat(auto-fill,100px); */
+                /* grid-template-columns:repeat(auto-fit,100px);    */
+                grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+            }
+            .i-1{
+                background:orangered;
+            }
+            .i-2{
+                background:slateblue;
+            }
+            .i-3{
+                background:peru;
+            }
+            .i-4{
+                background:palegreen;
+                /* grid-column-end:-1; */
+            }
+    </style>
+</head>
+<body>
+        <h1>Grid-auto-fill & Grid-auto-fit</h1>
+        <div class="container">
+            <div class="i-1">One</div>
+            <div class="i-2">Two</div>
+            <div class="i-3">Three</div>
+            <div class="i-4">Four</div>
+        </div>
+</body>
+</html>

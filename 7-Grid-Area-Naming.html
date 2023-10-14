@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 - Grid-Area-Naming</title>
+    <style>
+            .container{
+                background:#eee;
+                width:720px;
+                margin:45px auto 0;
+
+                display:grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: 120px 60px 100px 400px 50px;
+                gap:40px;
+                grid-template-areas: "header header ."
+                                     "menu menu menu"
+                                     "box-1 box-2 sidebar"
+                                     "content content sidebar";   
+            }
+            #box-1{
+                background:lightseagreen;
+                grid-area:header;
+            }
+            #box-2{
+                background:orange;
+                grid-area:menu;
+            }
+            #box-3{
+                background:green;
+                grid-area:box-1;
+            }
+            #box-4{
+                background:lightcoral;
+                grid-area:box-2;
+            }
+            #box-5{
+                background:yellow;
+                grid-area:sidebar;
+            }
+            #box-6{
+                background:blue;
+                grid-area:content;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+          <div id="box-1">
+                <ul style="display:flex; list-style:none; ">
+                    <li style="margin-left:20px;">Home</li>    
+                    <li style="margin-left:20px;">About</li>
+                    <li style="margin-left:20px;">Services</li>
+                    <li style="margin-left:20px;">Blog</li>
+                </ul>
+        </div>
+          <div id="box-2">menu</div>
+          <div id="box-3">Box - 1</div>
+          <div id="box-4">Box - 2</div>
+          <div id="box-5">Sidebar</div>
+          <div id="box-6">Content</div>  
+    </div>
+</body>
+</html>

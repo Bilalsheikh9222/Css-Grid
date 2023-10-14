@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - Grid-items Alignment</title>
+    <!-- Style -->
+    <style>
+            body{
+                font-size:30px;
+            }
+            /* stretch */
+            .container{
+                display:grid;
+                width:700px;
+                background:lightgray;
+                /*  */
+                grid-template-rows:repeat(2,200px);
+                grid-template-columns:repeat(2,1fr);
+                grid-gap:15px;
+                margin:48px auto 0;
+                grid-auto-rows: 70px;
+                /* align-items:center; */
+                /* align-items:start; for all items - vertical */
+                /* justify-items:center; */ /* for all items - horizontal */
+                /* place-items: align-items justify-items; - shorthand */
+                /* place-items: center start; */
+            }
+            .i-1{
+                background:orangered;
+                /* place-self: align-self justify-self; */ /* for one item */
+                place-self:center start;
+            }
+            .i-2{
+                background:seagreen;
+                /* for vertical */
+                /* align-self:center; */ /* for one item */
+            }
+            .i-3{
+                background:purple;
+                grid-row:span 3;
+            }
+            .i-4{
+                background:blue;
+            }
+            .i-5{
+                background:yellowgreen;
+            }
+            .i-6{
+                background:rgb(206, 25, 154);
+            }
+            .i-7{
+                background:orange;
+                grid-column:span 2;
+                justify-self:center;
+            }
+            .i-8{
+                background:palegreen;
+            }
+    </style>
+</head>
+<body>
+        <h1>10-Grid-items-Alignment</h1>
+        <div class="container">
+                <div class="i-1">One</div>
+                <div class="i-2">Two</div>
+                <div class="i-3">Three</div>
+                <div class="i-4">Four</div>
+                <div class="i-5">Five</div>
+                <div class="i-6">Six</div>
+                <div class="i-7">Seven</div>
+                <div class="i-8">Eight</div>
+        </div>
+</body>
+</html>

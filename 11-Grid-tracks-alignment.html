@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 - Grid-tracks-alignment</title>
+    <style>
+        .container{
+            width:700px;
+            height:700px;
+            background:lightgray;
+            margin:0 auto;
+            /*  */
+            display:grid;
+            grid-template-rows:repeat(2,100px);
+            grid-template-columns:repeat(2,150px);
+            /*  */
+            justify-content:space-evenly;
+            align-content:center;
+            gap:20px;
+            /*  */
+            /* grid-auto-flow:row dense; */
+            grid-auto-rows:50px;
+        }
+        .i-1{
+            background:green;
+        }
+        .i-2{
+            background: orangered;
+        }
+        .i-3{
+            background:orchid;
+            grid-column:span 2;
+        }
+        .i-4{
+            background:peru;
+        }
+        .i-5{
+            background:purple;
+        }
+        .i-6{
+            background:lawngreen;
+        }
+        .i-7{
+            background:yellow;
+        }
+    </style> 
+</head>
+<body>
+        <h1>11 - Grid-tracks-alignment</h1>
+        <div class="container">
+                <div class="i-1">One</div>
+                <div class="i-2">Two</div>
+                <div class="i-3">Three</div>
+                <div class="i-4">Four</div>
+                <div class="i-5">Five</div>
+                <div class="i-6">Six</div>
+                <div class="i-7">Seven</div>
+                <!-- <div class="i-8">Eight</div> -->
+        </div>
+</body>
+</html>

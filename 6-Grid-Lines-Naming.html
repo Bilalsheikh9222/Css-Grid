@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - Grid-lines-Naming</title>
+    <style>
+            .boxes{
+                width:700px;
+                height: 800px;
+                margin:auto;
+                display:grid;
+                grid-template-rows:200px 100px 40px 40px 400px 50px;
+                grid-template-columns:[c-s]1fr 1fr[c-e];
+                background-color:lightgray;
+                gap:20px;
+            }
+            #box-1{
+                background:lightblue;
+                /* row start col-start row-end col-end  */
+                grid-area:1/c-s/2/c-e;
+            }
+            #box-2{
+                background:lightcoral;
+                
+            }
+            #box-3{
+                background:lightgreen;
+                grid-column:h-s/h-e;
+            }
+            #box-4{
+                background:orange; 
+                grid-column:h-s/h-e;     
+            }
+            #box-5{
+                background:green;
+                grid-column:h-s/h-e;
+            }
+            #box-6{
+                background:yellow;
+                grid-column:h-s/h-e;
+            }
+    </style>
+</head>
+<body>
+      <div class="boxes">
+            <div id="box-1">Box-1</div>
+            <div id="box-2">Box-2</div>
+            <div id="box-3">Box-3</div>
+            <div id="box-4">Box-4</div>
+            <div id="box-5">Box-5</div>
+            <div id="box-6">Box-6</div>
+      </div>  
+</body>
+</html>
