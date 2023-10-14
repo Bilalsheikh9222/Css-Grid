@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13 - Order</title>
+    <style>
+      .container {
+        background: lightgray;
+        width: 400px;
+        display: grid;
+        grid-template-rows: repeat(2, 80px);
+        grid-template-columns: repeat(3, 100px);
+      }
+      .item {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .i-1 {
+        background: orangered;
+        order: 2;
+      }
+      .i-2 {
+        background: blue;
+        order: 1;
+      }
+      .i-3 {
+        background: palegreen;
+        order: 1;
+      }
+      .i-4 {
+        background: indianred;
+        order: 1;
+      }
+      .i-5 {
+        background: purple;
+      }
+      .i-6 {
+        background: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>13 - Order | CSS GRID</h1>
+    <div class="container">
+      <div class="item i-1">One</div>
+      <div class="item i-2">Two</div>
+      <div class="item i-3">Three</div>
+      <div class="item i-4">Four</div>
+      <div class="item i-5">Five</div>
+      <div class="item i-6">Six</div>
+    </div>
+  </body>
+</html>
