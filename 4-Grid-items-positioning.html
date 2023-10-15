@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4 - Grid-items-positioning</title>
     <style>
-            .container{
-                background-color:#eee;
-                width:700px;
-                display:grid;
-                grid-template-rows: repeat(2, 1fr);
-                grid-template-columns:
-            }
-            .item-1{
-                background-color:orangered;
-            }
-            .item-2{
-                background-color:yellowgreen;
-            }
-            .item-3{
-                background-color:slateblue;
-            }
-            .item-4{
-                background-color:seagreen;
-            }
-            .item-5{
-                background-color:aqua
-            }
-            .item-6{
-                background-color:purple;
-            }
+      .container {
+        width: 400px;
+        height: 400px;
+        background: lightgray;
+        margin: 30px auto 0;
+        display: grid;
+        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(3, 100px);
+      }
+      .i-1 {
+        background: orangered;
+        /* grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: -1; */
+        /* shorthand - start/end */
+        grid-row: 2/3;
+        grid-column: 3/-1; /* or 4 samething */
+      }
+      .i-2 {
+        background: orchid;
+      }
+      .i-3 {
+        background: yellowgreen;
+      }
+      .i-4 {
+        background: indianred;
+      }
+      .i-5 {
+        background: paleturquoise;
+      }
+      .i-6 {
+        background: palegreen;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="i-1">One</div>
+      <div class="i-2">Two</div>
+      <div class="i-3">Three</div>
+      <div class="i-4">Four</div>
+      <div class="i-5">Five</div>
+      <div class="i-6">Six</div>
+    </div>
+  </body>
 </html>
