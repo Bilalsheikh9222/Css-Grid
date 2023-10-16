@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>15 - Nested-Grid</title>
     <style>
-            .container{
-                width:500px;
-                height:300px;
-                background:lightgray;
-                
-                display:grid;
-                grid-template-rows:repeat(2,150px);
-                grid-template-columns:repeat(3, 1fr);
-                margin:0 auto 50px;
-            }
-        
-            .i-1{
-            background: orangered;
-            order:1;
-            }
-            .i-2{
-            background:seagreen;
-            }
-            .i-3{
-            background: red;
-            }
-            .i-4{
-            background:purple;
-            }
-            .i-5{
-            background: goldenrod;
-            }
-            .i-6{
-            background:slateblue;
-            }
+      .container {
+        width: 500px;
+        height: 300px;
+        background: lightgray;
+
+        display: grid;
+        grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto 50px;
+        gap: 5px;
+      }
+
+      .i-1 {
+        background: orangered;
+      }
+      .i-2 {
+        background: seagreen;
+      }
+      .i-3 {
+        background: red;
+        display: grid;
+        grid-template-rows: repeat(2, 50px);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .i-3 > div {
+        background: yellow;
+        color: red;
+      }
+      .i-4 {
+        background: purple;
+      }
+      .i-5 {
+        background: goldenrod;
+      }
+      .i-6 {
+        background: slateblue;
+      }
     </style>
-</head>
-<body>
-        <h1>15 - Nested-Grid</h1>
-        <div class="container">
-            <div class="i-1">One</div>
-            <div class="i-2">Two</div>
-            <div class="i-3">Three</div>
-            <div class="i-4">Four</div>
-            <div class="i-5">Five</div>
-            <div class="i-6">Six</div>
-        </div>
-</body>
+  </head>
+  <body>
+    <h1>15 - Nested-Grid</h1>
+    <div class="container">
+      <div class="i-1">One</div>
+      <div class="i-2">Two</div>
+      <div class="i-3">
+        <!-- Three -->
+        <div class="subi-1">subOne</div>
+        <div class="subi-2">subTwo</div>
+        <div class="subi-3">subThree</div>
+      </div>
+      <div class="i-4">Four</div>
+      <div class="i-5">Five</div>
+      <div class="i-6">Six</div>
+    </div>
+  </body>
 </html>
