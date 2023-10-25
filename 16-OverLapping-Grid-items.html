@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 - OverLapping-Grid-items</title>
+    <style>
+            body{
+                height:100vh;
+            }
+            .container{
+                width:300px;
+                height:200px;
+                background:gray;
+                display:grid;
+                grid-template-rows:repeat(2,100px);
+                grid-template-columns:repeat(2,150px);
+            }
+            
+            .items{
+                max-width:150px;
+            }
+
+            .i-1{
+                background:orangered;
+                grid-row:1/ span 2;
+                grid-column:1/span 2;
+                align-self:start;
+                justify-self:start;
+                z-index:3;
+            }
+            .i-2{
+                background:olivedrab;
+                grid-row:1/span 2;
+                grid-column:1/span 2;
+                align-self:center;
+                justify-self:center;
+                z-index:1;
+            }
+            .i-3{
+                background:slateblue;
+                grid-row:1/span 2;
+                grid-column:1/span 2;
+                align-self:end;
+                justify-self:end;
+                z-index:2;
+            }
+    </style>
+</head>
+<body>
+        <h1>16 - OverLapping-Grid-items</h1>
+        <div class="container">
+                <div class="i-1 items">One Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem!</div>
+                <div class="i-2 items">Two Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem!</div>
+                <div class="i-3 items">Three Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, exercitationem!</div>
+        </div>
+</body>
+</html>
